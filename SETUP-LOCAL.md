@@ -99,12 +99,25 @@ h264+aac 30fps mp4. `render_demo.py --list` shows all three.
 
 ## Branch map
 
-- `main` — tracks `calesthio/OpenMontage`. Untouched.
-- `fix/music-plan-checks-all-capabilities` — upstream PR #464, docs-only music
-  capability fix, cherry-picked clean off upstream main.
-- `fix/music-capability-discovery` — the same fix plus `music_selector`, the
-  426-line tool registering under its own `music` capability. Deliberately not
-  submitted upstream: CONTRIBUTING.md wants tests with behavior changes, and
-  giving the selector its own capability is an architectural call a maintainer
-  should weigh in on first.
+As of 2026-08-10.
+
+- `main` — tracks `calesthio/OpenMontage`, at 4eab34c. Untouched.
+- **`feat/music-selector` — the live branch. Use this one.** `music_selector`
+  alone, cherry-picked onto current upstream main, 424 insertions and zero
+  deletions across three files. Verified after the rebuild: registry discovery
+  finds it under capability `music`, `operation: "plan"` returns
+  `cheapest_available: pixabay_music` for free, and `pytest tests/contracts/`
+  passes 630 with 7 skipped.
+- `fix/music-capability-discovery` — **superseded, keep for reference only.** It
+  carried the selector plus a docs fix that upstream has since made redundant,
+  and it conflicts in six files against current main.
+- `fix/music-plan-checks-all-capabilities` — the branch behind upstream PR #464.
+  **Closed unmerged on 2026-08-03**, superseded by upstream's own PR #466, which
+  reproduced the same defect independently and added regression coverage. The
+  three-capability music check is upstream now. Dead branch, keep for the record.
 - `fork-local` — this branch. Backup only.
+
+The selector is still unsubmitted upstream, deliberately. CONTRIBUTING.md wants
+tests with behavior changes and there is no `tests/tools/test_music_selector.py`
+yet. Giving the selector its own `music` capability is also an architectural call
+a maintainer should weigh in on, so open an issue before a PR.
