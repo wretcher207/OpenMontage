@@ -1,0 +1,17 @@
+---
+description: Fork-local agent contract (overrides openmontage.mdc)
+globs: ["**/*"]
+alwaysApply: true
+---
+
+Read `AGENT_LOCAL.md` in the repo root before acting.
+
+It is this fork's agent contract: task routing, autonomy, checkpoint
+pre-authorization, presentation rules, non-negotiables, machine facts, and
+current status. It **overrides `openmontage.mdc`, `AGENTS.md`, and
+`AGENT_GUIDE.md` where they disagree**, including the "read AGENT_GUIDE.md before
+responding to ANY user message" rule. `AGENT_GUIDE.md` is a reference to consult
+per task, not a preamble.
+
+`AGENT_LOCAL.md` is untracked and git-excluded, so it will not appear in
+`git status`.
