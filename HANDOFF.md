@@ -1,4 +1,4 @@
-> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage, with local contributions going upstream | next: David watches WGYC redux rev 5 (2:44, registration redacted in 3 shots); music_selector tests + upstream PR still pending
+> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage, with local contributions going upstream | next: David watches WGYC redux rev 5 (watch the `-rec709` copy, not the original); music_selector tests + upstream PR still pending
 
 # HANDOFF - OpenMontage
 
@@ -6,6 +6,26 @@ Upstream clone plus local work. Contribute changes upstream rather than
 diverging.
 
 Created 2026-08-14.
+
+
+## 2026-08-18 — delivered colour was full range, fixed in the skill
+
+`deliver` never converted colour. Everything upstream of it is concat-copied, so
+delivered files carried whatever the source declared: camera MJPEG is full range
+BT.601, and `yuvj` is deprecated enough that players ignore the flag, assume
+limited range, and stretch the levels. A WGYC card ground rendered `#1a2332`
+showed up near-black (`#0b1626`) on screen with the pixels correct all along.
+
+Fixed in `recording-cutdown`'s `montage.py` (`~/.claude`, commit `73bda2f`), not
+here: `cmd_deliver` now converts to BT.709 limited, tags all three fields, and
+prints the delivered colour with an OK/BAD verdict. The `scale` filter carries no
+`in_*` flags so screen captures already in BT.709 pass through untouched.
+
+WGYC rev5 was re-encoded rather than re-cut since its pixels were fine:
+`C:/media/video/wgyc-camper-top/final/2026-08-17_wgyc-camper-top-rev5-rec709_review.mp4`.
+That is the copy to watch. Clips in `projects/wgyc-camper-top-redux/clips/` still
+carry the old tags, which is correct — they should match their source, and the
+single conversion happens at deliver.
 
 ## Agent contract
 
