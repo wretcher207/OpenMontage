@@ -1,4 +1,4 @@
-> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage, with local contributions going upstream | next: David watches WGYC redux rev 4 (2:44, indie-rock bed, site-matched cards, sew5/sew8 restored); music_selector tests + upstream PR still pending
+> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage, with local contributions going upstream | next: David watches WGYC redux rev 5 (2:44, registration redacted in 3 shots); music_selector tests + upstream PR still pending
 
 # HANDOFF - OpenMontage
 
