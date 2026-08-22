@@ -4,6 +4,43 @@
 Upstream clone plus local work. Contribute changes upstream rather than
 diverging.
 
+## 2026-08-22 - WGYC custom sailboat cover, 8:07 long-form cut
+
+**New delivery.** 8:07.6, 1920x1080, 30000/1001, -14.6 LUFS, -1.9 dBTP, BT.709.
+Read `projects/wgyc-sailboat-cover/SAILBOAT-CUT.md` before revising it.
+
+`C:/media/video/wgyc-sailboat-cover/final/2026-08-22_wgyc-sailboat-cover_review.mp4`
+
+**Unauditioned - nobody has watched or listened to it.**
+
+- Source is `C:/media/video/_inbox/wgyc-custom-sailboat-cover/` (35 clips,
+  39:36, three days). It arrived with its own `FOOTAGE-INVENTORY.md`, which is
+  accurate except on speech.
+- **The inventory undercounts her speech: there are four to-camera clips, not
+  two.** `IMG_2845` is a clean 19s intro and `IMG_2846` narrates the ratchet
+  pocket, on top of the 0416/0425 pair the inventory lists. ~2:30 total. 2845
+  became the cold open because of it. Transcribe before trusting a shot log.
+- 51 of 55 timeline items are real footage; the other four are cards.
+- **Portrait crop pans must be measured, not estimated.** All the shop footage
+  is portrait-only and gets a per-shot 16:9 pan. Seven shots were wrong on the
+  first pass and `IMG_0391` was framing shop ceiling instead of her hands. The
+  action in the close clips sits 45-80% down the portrait frame. A 72-frame
+  timeline contact sheet does NOT catch this - one midpoint frame per shot,
+  tiled, does. Run that after any pan change.
+- **The limiter sits at -3.0 dBFS on purpose.** AAC adds ~1.4 dB of intersample
+  overshoot over the WAV sample peak, so limiting at -1.7 still produced a -0.3
+  dBFS file, and trimming on the encode cost 1.3 LU. Headroom upstream is the
+  fix. Do not raise it.
+- Music is **placeholder and unauditioned**: three cues from
+  `C:/media/audio/suno/unused-beds/`, picked on duration and marine-sounding
+  filenames. That is the same method that failed on the cushions job. Needs
+  David's ear.
+- `IMG_0425` is one unbroken 42.7s take. It was two beats that both cut her off
+  mid-sentence. If act four drags, cover it with `IMG_0424`; do not trim her.
+- Still missing: `IMG_2806` and `IMG_2808` arrived at 224x128 and are the only
+  coverage of pulling and trimming the finished pattern. Ask Camilla to re-send
+  those two at original resolution.
+
 ## 2026-08-19 - WGYC outdoor cushions process cut, and a project directory vanished
 
 **`projects/wgyc-outdoor-cushions-hermes/` is gone from disk.** It disappeared
