@@ -104,8 +104,8 @@ Nothing here is pending.
   crf 19 / preset slow / maxrate 9M / faststart to reach 7.7 Mbps, matching
   rev1's 7.0 Mbps. Do that on every future revision.
 - Rev 1 stays in `final/` for comparison.
-- **YouTube URLs for both are not recorded anywhere.** Get them from David and
-  put them in `PROJECTS-LOCAL.md` before this scrolls out of reach.
+- **Published:** long https://youtu.be/wl2E8Hs8osY, Short
+  https://youtube.com/shorts/7wlCBlXr4Do (also in `PROJECTS-LOCAL.md`).
 
 ## 2026-08-23 - WGYC sailboat cover, the 9:16 Short
 
