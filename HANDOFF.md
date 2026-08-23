@@ -1,4 +1,4 @@
-> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage | next: Ox Alpha / REAPER Daemon page cut is revised on David's notes and parked on an 11-box human safety sweep (nothing delivered); WGYC sailboat long cut rev2 is built and verified (her framing note fixed) and needs sending to Camilla; the Short is undelivered and unauditioned; music is placeholder in both; reaper-daemon-drums is BROKEN - source has 35s of digital silence over the cold open and the payoff, needs the REAPER groove bounced or a re-record before anything else
+> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage | next: Ox Alpha / REAPER Daemon page cut is revised on David's notes and parked on an 11-box human safety sweep (nothing delivered); WGYC sailboat is DONE - rev2 and the Short are both audited by David, public on YouTube, and rev2 is with Camilla; the beds shipped as-is; reaper-daemon-drums is BROKEN - source has 35s of digital silence over the cold open and the payoff, needs the REAPER groove bounced or a re-record before anything else
 # HANDOFF - OpenMontage
 
 Upstream clone plus local work. Contribute changes upstream rather than
@@ -77,7 +77,11 @@ gets a per-shot 16:9 pan, and those pans sat too high. Her originals hold the
 needle, the presser foot and her hands in every one of the shots she named -
 checked against the source frames, not assumed.
 
-**Rev 2, built and verified, not yet sent:**
+**Rev 2 is delivered, public, and audited.** David watched and listened to it
+2026-08-23, sent it to Camilla, and published it. The 9:16 Short is public too.
+Nothing here is pending.
+
+**Rev 2:**
 `C:/media/video/wgyc-sailboat-cover/final/2026-08-23_wgyc-sailboat-cover_rev2.mp4`
 487.55s, 1920x1080, 30000/1001, -14.6 LUFS, -2.1 dBTP, BT.709, 7.7 Mbps, 485 MB.
 
@@ -87,8 +91,9 @@ checked against the source frames, not assumed.
 - The 0402 pair was outside her note - David approved adding it. Its trimming
   beat had the snips and most of her hands out of frame.
 - **Audio and timeline are untouched.** Same duration, same `renders/mix.wav`,
-  so sync and the placeholder bed are exactly what she already heard. The music
-  is still unauditioned placeholder and she has not commented on it.
+  so sync is exactly what she already heard. **The bed shipped as-is** - the
+  three Suno cues picked on duration and filename went out and David passed them
+  on his own listen, so the placeholder is now the released mix. Do not swap it.
 - Verified by pulling frames from the finished file at 258, 266, 274, 282, 292,
   304, 316, 375 and 388s. Needle or presser foot plus her hands in all nine.
 - **The midpoint contact sheet does not catch this.** A midpoint frame of a
@@ -98,7 +103,9 @@ checked against the source frames, not assumed.
   and lands at 12.5 Mbps / 780 MB. Rev 2 was re-encoded from `picture.mp4` at
   crf 19 / preset slow / maxrate 9M / faststart to reach 7.7 Mbps, matching
   rev1's 7.0 Mbps. Do that on every future revision.
-- Rev 1 stays in `final/` for comparison. Nobody has watched rev2 end to end.
+- Rev 1 stays in `final/` for comparison.
+- **YouTube URLs for both are not recorded anywhere.** Get them from David and
+  put them in `PROJECTS-LOCAL.md` before this scrolls out of reach.
 
 ## 2026-08-23 - WGYC sailboat cover, the 9:16 Short
 
@@ -108,7 +115,7 @@ Read `projects/wgyc-sailboat-short/SHORT-CUT.md` before revising it.
 `C:/media/video/wgyc-sailboat-cover/final/2026-08-23_wgyc-sailboat-cover-short_review.mp4`
 (`.srt` beside it; the same five cues are burned in.)
 
-**Unauditioned - nobody has watched or listened to it.**
+**Audited and published 2026-08-23.** David watched and listened; it is public.
 
 - **Every source in it is natively 9:16, so there is no crop and no upscale
   anywhere.** IMG_0480 and IMG_0408 are 4K portrait and downscale 2x; the rest
