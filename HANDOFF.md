@@ -1,8 +1,46 @@
-> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage | next: Ox Alpha / REAPER Daemon page cut is revised on David's notes and parked on an 11-box human safety sweep (nothing delivered); WGYC sailboat is DONE - rev2 and the Short are both audited by David, public on YouTube, and rev2 is with Camilla; the beds shipped as-is; reaper-daemon-drums is BROKEN - source has 35s of digital silence over the cold open and the payoff, needs the REAPER groove bounced or a re-record before anything else
+> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage | next: Ox Alpha SHORT is built and delivered (47.2s vertical, needs David's watch before upload); the Ox Alpha LONG-FORM cut is still parked on its 11-box human safety sweep and nothing long-form is delivered; WGYC sailboat is DONE - rev2 and the Short are both audited by David, public on YouTube, and rev2 is with Camilla; the beds shipped as-is; reaper-daemon-drums is BROKEN - source has 35s of digital silence over the cold open and the payoff, needs the REAPER groove bounced or a re-record before anything else
 # HANDOFF - OpenMontage
 
 Upstream clone plus local work. Contribute changes upstream rather than
 diverging.
+
+## 2026-08-23 - Ox Alpha: the 47s vertical Short is built and delivered
+
+**This is the Short only. The long-form cut is untouched and still parked** on
+its 11-box human safety sweep, which nothing below unblocks.
+
+- **Delivered:**
+  `C:/media/video/ox-alpha-reaper-daemon-page/final/2026-08-23_ox-alpha-reaper-daemon-short_master.mp4`
+  plus a matching `.srt`. 47.2s, 1080x1920, 30fps, -14.2 LUFS, LRA 5.2,
+  TP -1.4 dBFS, BT.709. The 9:16 thumbnail that was already sitting in `final/`
+  fits it ("WHO BUILT OX ALPHA?").
+- **Build:** `projects/ox-alpha-reaper-daemon-short/` (gitignored, like the
+  other short projects). One file, `build.py`, EDL included. `README.md` there
+  is the paper trail; read it before touching the cut.
+- **Every in and out is inherited from the long-form `edl.py`**, cut from the
+  same raw and the same authoritative WAV. Three pins moved and each says why
+  at the beat: `hook` is split across its own 3.4s hole, the free-week thesis
+  loses its middle, and `reveal_open` drops from 7.5s to 3.6s because the hero
+  stops moving at src 562.
+- **It carries LESS exposure than the long-form cut, deliberately.** The
+  argument beats are on the PHONE, not on screen, because the master's full
+  frame shows the bookmarks bar and `C:/Users/wretc/...` paths and a vertical
+  punch-in makes that text MORE legible, not less. The only screen material is
+  the PAGE crop the master's own report already clears, and its bottom edge is
+  12 rows tighter so the 8px taskbar sliver the master carries is gone. Swept
+  all 10.1s of page material at 2fps and all 25.4s of face material at 1fps;
+  sheets are in `projects/ox-alpha-reaper-daemon-short/qc/`.
+- **No profanity in this cut** - checked against the transcript in every window
+  used, not just against the srt.
+- **The bed is Suno**, two of the master's own four cues, so the upload needs
+  claiming after it goes live. Level was set by measuring three duck settings,
+  not by ear; numbers are in the README.
+- **`It works too. It's functional.` is deliberately NOT in the cut.** Its own
+  mapped picture is a GitHub repo page, not the product page - he had tabbed
+  away. Using the line would have meant importing a picture from elsewhere in
+  the timeline under a claim about the page working.
+- **Left for David:** watch it start to finish. That is the one gate a build
+  cannot close.
 
 ## 2026-08-22 - Ox Alpha / REAPER Daemon page: finished cut, parked at the safety gate
 
