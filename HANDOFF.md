@@ -1,8 +1,49 @@
-> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage | next: Ox Alpha SHORT is built and delivered (47.2s vertical, needs David's watch before upload); the Ox Alpha LONG-FORM cut is still parked on its 11-box human safety sweep and nothing long-form is delivered; WGYC sailboat is DONE - rev2 and the Short are both audited by David, public on YouTube, and rev2 is with Camilla; the beds shipped as-is; reaper-daemon-drums is BROKEN - source has 35s of digital silence over the cold open and the payoff, needs the REAPER groove bounced or a re-record before anything else
+> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage | next: codex-reaper-daemon is DELIVERED (4m24.1s, review PASS, masters in C:/media/video/codex-reaper-daemon/final/) and needs David's watch before upload; Ox Alpha SHORT is built and delivered (47.2s vertical, needs David's watch); the Ox Alpha LONG-FORM cut is still parked on its 11-box human safety sweep and nothing long-form is delivered; WGYC sailboat is DONE - rev2 and the Short are both audited by David, public on YouTube, and rev2 is with Camilla; the beds shipped as-is; reaper-daemon-drums is BROKEN - source has 35s of digital silence over the cold open and the payoff, needs the REAPER groove bounced or a re-record before anything else
 # HANDOFF - OpenMontage
 
 Upstream clone plus local work. Contribute changes upstream rather than
 diverging.
+
+## 2026-08-23 - codex-reaper-daemon: delivered, 4m24, needs his ears
+
+**New piece, done end to end today.** Codex driving the REAPER Daemon on two
+jobs in one live session: humanize a MIDI drum track (it nails it) and write
+mirrored automation across a stereo guitar pair (it does not, then eventually
+does after a lot of hand-holding). `review` returns PASS.
+
+- **Masters:** `C:/media/video/codex-reaper-daemon/final/` -
+  `2026-08-23_codex-reaper-daemon_master.mp4`, 264.10s, 1920x1080, 30fps CFR,
+  irregular=0, -14.2 LUFS, -1.9 dBTP, BT.709 limited, 2.6 Mbps, 82 MB, plus its
+  `.srt` (73 hand-corrected cues) and a 15fps halfrate agent artifact.
+- **Read `projects/codex-reaper-daemon/README.md` before touching the cut.** It
+  carries the measured clocks, the framing reasoning, the six defects `script`
+  caught, and the safety constraint below.
+- **A green vape device was on screen at 204s of the first cut** and is now
+  gone. It sat inside the `lapse_wait` timelapse; the window moved from source
+  1220-1430 at 42x to **1230-1325 at 19x**, same 5.00s exactly. The device is at
+  source 1336-1337 with hand-to-mouth to 1346. **Do not widen that window.**
+- **The source is healthy, unlike reaper-daemon-drums.** Zero digital-silence
+  stretches in the VO stem (positive-controlled), and the REAPER playback
+  actually reached the recording this time, so the before/after drum listens are
+  real audio.
+- **The camera is a burned-in inset, not cutaways.** The screen capture has no
+  webcam and the phone camera is a separate portrait file, so the edit source is
+  a composite: screen at full frame plus a 300x375 camera inset at
+  x=1576,y=661. Camera offset measured at +2.969s against the OBS/VO clock, 12ms
+  drift across 25 minutes. `montage.py` was not modified.
+- **Two things a future cut should know about the rig:** it is UNGATED (room
+  floor -64 dB, `burst_db` -44, not the -52 default), and the REAPER playback
+  lands 4-7 LU under his voice so listen clips need a gain. `listen` is capped
+  at +5 dB by peak, not by taste; +8 hard-clipped it.
+- Music is three original library cues (cold-front / nightline / undertow),
+  loudness-matched before assembly, bed silent under both drum listens. No new
+  cue was scored: REAPER was open with an unsaved project and `agentic-score`
+  drives that same REAPER.
+- **Open for David, not blocking:** nobody has watched it with ears. It is
+  verified by measurement, by transcription of the built clips, by 46 QC frames,
+  by a per-second level scan and by a per-second camera sweep. Also: he dropped
+  `codex.jpg` and `reaper-logo.jpg` in the inbox and neither is usable as an
+  overlay (checkerboard baked in as pixels, no alpha); they are unused.
 
 ## 2026-08-23 - Ox Alpha: the 47s vertical Short is built and delivered
 
