@@ -1,8 +1,54 @@
-> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage | next: codex-reaper-daemon is DELIVERED (4m24.1s, review PASS, masters in C:/media/video/codex-reaper-daemon/final/) and needs David's watch before upload; Ox Alpha SHORT is built and delivered (47.2s vertical, needs David's watch); the Ox Alpha LONG-FORM cut is still parked on its 11-box human safety sweep and nothing long-form is delivered; WGYC sailboat is DONE - rev2 and the Short are both audited by David, public on YouTube, and rev2 is with Camilla; the beds shipped as-is; reaper-daemon-drums is BROKEN - source has 35s of digital silence over the cold open and the payoff, needs the REAPER groove bounced or a re-record before anything else
+> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage | next: codex-reaper-daemon is DELIVERED (4m24.1s master plus a 49.7s vertical SHORT delivered 2026-08-24, both in C:/media/video/codex-reaper-daemon/final/) and BOTH need David's watch before upload; the master's .srt has one wrong word at cue 56 - it says "See, Codex officially sucks at this shit" and the source says "Yeah," - not fixed yet; the delivered ox-alpha Short is 96 kHz AAC from a loudnorm/aac interaction, harmless in playback but wrong in a master, rebuild fixes it; Ox Alpha SHORT is built and delivered (47.2s vertical, needs David's watch); the Ox Alpha LONG-FORM cut is still parked on its 11-box human safety sweep and nothing long-form is delivered; WGYC sailboat is DONE - rev2 and the Short are both audited by David, public on YouTube, and rev2 is with Camilla; the beds shipped as-is; reaper-daemon-drums is BROKEN - source has 35s of digital silence over the cold open and the payoff, needs the REAPER groove bounced or a re-record before anything else
 # HANDOFF - OpenMontage
 
 Upstream clone plus local work. Contribute changes upstream rather than
 diverging.
+
+## 2026-08-24 - codex-reaper-daemon: the 49.7s vertical Short is delivered
+
+**This is the Short only. The 4m24 master is untouched.** Both now need the
+same thing from him: a watch, with ears.
+
+- **Delivered:**
+  `C:/media/video/codex-reaper-daemon/final/2026-08-24_codex-reaper-daemon-short_master.mp4`
+  plus a matching `.srt`. 49.7s, 1080x1920, 30fps CFR, -14.5 LUFS, -1.54 dBTP,
+  BT.709, AAC 48 kHz, 70 MB.
+- **Build:** `projects/codex-reaper-daemon-short/` (gitignored, like the other
+  short projects). `build.py` makes it, `verify.py` checks it without trusting
+  it. `README.md` there is the paper trail - read it before touching the cut.
+- **Cut from the RAWS, not from the master.** The master's picture is a
+  composite with the phone camera burned in as a 300x375 inset, so a vertical
+  crop of it would either clip the inset or lose his face. Going back to the
+  raw means the phone file is native 9:16 and fills the frame at exactly 0.5x
+  with no crop at all. Every in and out still descends from the master's
+  `edl.py`.
+- **The Short IS the before/after.** Flat pink block of 127-velocity drum hits,
+  hard cut, jagged human shape - both off a 540x540 crop of the REAPER MIDI
+  editor. The master's timelapse is dropped: sampled at 8s spacing inside that
+  crop the picture barely moves.
+- **The audio path was positive-controlled before the first build.** VO +
+  REAPER desktop summed with `amix normalize=0` nulls against the master's own
+  edit source at -56 dB, so the master's per-clip gains carry over meaning what
+  they meant.
+- **Two bugs found in the sibling ox-alpha Short's build script**, both fixed
+  here and both still in that delivered master: it writes 96 kHz AAC (loudnorm
+  outputs 192 kHz and the encoder picks the nearest rate it has), and
+  `loudnorm` in linear mode only warns about a true-peak overshoot rather than
+  stopping it - the first build here landed -0.29 dBTP against a -1.5 request.
+- **The master's caption is wrong in one place.** Cue 56 of
+  `2026-08-23_codex-reaper-daemon_master.srt` reads "See, Codex officially
+  sucks at this shit." Three window transcriptions of the raw VO and the burst
+  map all say "Yeah,". The Short captions it correctly; the master was left
+  alone because it is a different deliverable.
+- **The sibling Short's bed level did not transfer.** Its -3.0 dB put this
+  cut's bed-alone card beats LOUDER than the voice. Set to -10.0 by
+  measurement, which lands them 4.2 and 3.3 LU under program.
+- **Verified:** 29/29 caption cues matched against a transcription of the
+  delivered file's own audio, per-beat loudness scan, black-frame scan (three
+  runs, all three are the cards), 52 QC frames, and a 2fps full-frame sweep of
+  all six camera windows. The vape span the master constrains is 146s clear of
+  the nearest kept material.
+- **Left for David:** watch it start to finish. Same gate the master is on.
 
 ## 2026-08-23 - codex-reaper-daemon: delivered, 4m24, needs his ears
 
