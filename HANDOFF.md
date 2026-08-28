@@ -1,4 +1,4 @@
-> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage | next: claude-band-reaper-daemon is DELIVERED 2026-08-27 - a 6:17.7 long-form master, a 50.97s vertical Short, both thumbnails and the social package, all in C:/media/video/claude-band-reaper-daemon/final/ - and NOBODY HAS WATCHED EITHER CUT, which is the only thing left; one open call for David, the agent's Recents list is legible on screen and names a client by shorthand; codex-reaper-daemon is DELIVERED (4m24.1s master plus a 49.7s vertical SHORT delivered 2026-08-24, both in C:/media/video/codex-reaper-daemon/final/) and BOTH need David's watch before upload; the master's .srt has one wrong word at cue 56 - it says "See, Codex officially sucks at this shit" and the source says "Yeah," - not fixed yet; the delivered ox-alpha Short is 96 kHz AAC from a loudnorm/aac interaction, harmless in playback but wrong in a master, rebuild fixes it; Ox Alpha SHORT is built and delivered (47.2s vertical, needs David's watch); the Ox Alpha LONG-FORM cut is still parked on its 11-box human safety sweep and nothing long-form is delivered; WGYC sailboat is DONE - rev2 and the Short are both audited by David, public on YouTube, and rev2 is with Camilla; the beds shipped as-is; reaper-daemon-drums is BROKEN - source has 35s of digital silence over the cold open and the payoff, needs the REAPER groove bounced or a re-record before anything else
+> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage | next: claude-band-reaper-daemon is DELIVERED 2026-08-27 - a 6:25.9 long-form master, a 53.0s vertical Short, both thumbnails and the social package, all in C:/media/video/claude-band-reaper-daemon/final/ - and NOBODY HAS WATCHED EITHER CUT, which is the only thing left; one open call for David, the agent's Recents list is legible on screen and names a client by shorthand; codex-reaper-daemon is DELIVERED (4m24.1s master plus a 49.7s vertical SHORT delivered 2026-08-24, both in C:/media/video/codex-reaper-daemon/final/) and BOTH need David's watch before upload; the master's .srt has one wrong word at cue 56 - it says "See, Codex officially sucks at this shit" and the source says "Yeah," - not fixed yet; the delivered ox-alpha Short is 96 kHz AAC from a loudnorm/aac interaction, harmless in playback but wrong in a master, rebuild fixes it; Ox Alpha SHORT is built and delivered (47.2s vertical, needs David's watch); the Ox Alpha LONG-FORM cut is still parked on its 11-box human safety sweep and nothing long-form is delivered; WGYC sailboat is DONE - rev2 and the Short are both audited by David, public on YouTube, and rev2 is with Camilla; the beds shipped as-is; reaper-daemon-drums is BROKEN - source has 35s of digital silence over the cold open and the payoff, needs the REAPER groove bounced or a re-record before anything else
 # HANDOFF - OpenMontage
 
 Upstream clone plus local work. Contribute changes upstream rather than
@@ -13,10 +13,18 @@ comes back closest to right. His verdict: "the potential's there, but I don't
 think AI is replacing musicians anytime soon."
 
 - **Delivered, all in one folder** at `C:/media/video/claude-band-reaper-daemon/final/`:
-  the 6:17.7 master (11331 frames, 1920x1080, 30fps CFR, -14.7 LUFS, -2.0 dBTP,
-  BT.709, AAC 48 kHz) plus its 112-cue `.srt`; the 50.97s Short (1529 frames,
-  1080x1920, -14.6 LUFS, -2.1 dBTP, captions burned in) plus its `.srt`; a
+  the 6:25.9 master (11577 frames, 1920x1080, 30fps CFR, -14.7 LUFS, -2.0 dBTP,
+  BT.709, AAC 48 kHz) plus its 115-cue `.srt`; the 53.0s Short (1590 frames,
+  1080x1920, -14.6 LUFS, -1.8 dBTP, captions burned in) plus its `.srt`; a
   16:9 and a 9:16 thumbnail; and `SOCIAL.md`.
+- **rev2, after David watched it.** He heard two out-points landing inside a
+  word, at 0:43 ("REAPER") and 1:00 ("chords"). An assertion over every piece
+  found 27 of the 74 doing it by 0.05 to 0.35s, and the same defect on the
+  IN-points once that was fixed. `cut._pull_in()` and `cut._extend()` now hold
+  every edit point clear of the word it lands in; zero pieces on either side.
+  A fifth transcription pass also settled the reaction beat, which every wider
+  window had misread ("I don't know about all that", not "how about all that").
+  Both files rebuilt, re-measured, re-captioned and re-swept.
 - **Social package also in the vault**, `C:/Users/wretc/second-brain` (the
   checkout Obsidian has open, on main), as
   `content/claude-band-reaper-daemon-video-social.md` (YouTube, Facebook, X)
