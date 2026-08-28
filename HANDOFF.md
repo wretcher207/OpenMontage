@@ -1,4 +1,4 @@
-> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage | next: claude-band-reaper-daemon is DELIVERED 2026-08-27 - a 6:25.9 long-form master, a 53.0s vertical Short, both thumbnails and the social package, all in C:/media/video/claude-band-reaper-daemon/final/ - and NOBODY HAS WATCHED EITHER CUT, which is the only thing left; one open call for David, the agent's Recents list is legible on screen and names a client by shorthand; codex-reaper-daemon is DELIVERED (4m24.1s master plus a 49.7s vertical SHORT delivered 2026-08-24, both in C:/media/video/codex-reaper-daemon/final/) and BOTH need David's watch before upload; the master's .srt has one wrong word at cue 56 - it says "See, Codex officially sucks at this shit" and the source says "Yeah," - not fixed yet; the delivered ox-alpha Short is 96 kHz AAC from a loudnorm/aac interaction, harmless in playback but wrong in a master, rebuild fixes it; Ox Alpha SHORT is built and delivered (47.2s vertical, needs David's watch); the Ox Alpha LONG-FORM cut is still parked on its 11-box human safety sweep and nothing long-form is delivered; WGYC sailboat is DONE - rev2 and the Short are both audited by David, public on YouTube, and rev2 is with Camilla; the beds shipped as-is; reaper-daemon-drums is BROKEN - source has 35s of digital silence over the cold open and the payoff, needs the REAPER groove bounced or a re-record before anything else
+> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage | next: claude-band-reaper-daemon is DELIVERED 2026-08-27 - 6:25.9 long-form master, 53.0s vertical Short, both thumbnails and the social package, all in C:/media/video/claude-band-reaper-daemon/final/, revised twice after David caught edit points landing inside words - and NOBODY HAS WATCHED EITHER CUT END TO END, which is the only open item; codex-reaper-daemon is DELIVERED (4m24.1s master plus a 49.7s vertical SHORT delivered 2026-08-24, both in C:/media/video/codex-reaper-daemon/final/) and BOTH need David's watch before upload; the master's .srt has one wrong word at cue 56 - it says "See, Codex officially sucks at this shit" and the source says "Yeah," - not fixed yet; the delivered ox-alpha Short is 96 kHz AAC from a loudnorm/aac interaction, harmless in playback but wrong in a master, rebuild fixes it; Ox Alpha SHORT is built and delivered (47.2s vertical, needs David's watch); the Ox Alpha LONG-FORM cut is still parked on its 11-box human safety sweep and nothing long-form is delivered; WGYC sailboat is DONE - rev2 and the Short are both audited by David, public on YouTube, and rev2 is with Camilla; the beds shipped as-is; reaper-daemon-drums is BROKEN - source has 35s of digital silence over the cold open and the payoff, needs the REAPER groove bounced or a re-record before anything else
 # HANDOFF - OpenMontage
 
 Upstream clone plus local work. Contribute changes upstream rather than
@@ -6,53 +6,109 @@ diverging.
 
 ## 2026-08-27 - claude-band-reaper-daemon: long form, Short, thumbnails, package
 
-**Done end to end in one run.** David asks Claude Code, through his own REAPER
-Daemon, to write a metal song in REAPER section by section, and reacts live.
-One riff comes back usable, the chorus comes back comically bad, the breakdown
-comes back closest to right. His verdict: "the potential's there, but I don't
-think AI is replacing musicians anytime soon."
+**Done end to end, then revised twice after David watched it.** He asks Claude
+Code, through his own REAPER Daemon, to write a metal song in REAPER section by
+section, and reacts live. One riff comes back usable, the chorus comes back
+comically bad, the breakdown comes back closest to right. His verdict: "the
+potential's there, but I don't think AI is replacing musicians anytime soon."
 
-- **Delivered, all in one folder** at `C:/media/video/claude-band-reaper-daemon/final/`:
-  the 6:25.9 master (11577 frames, 1920x1080, 30fps CFR, -14.7 LUFS, -2.0 dBTP,
-  BT.709, AAC 48 kHz) plus its 115-cue `.srt`; the 53.0s Short (1590 frames,
-  1080x1920, -14.6 LUFS, -1.8 dBTP, captions burned in) plus its `.srt`; a
-  16:9 and a 9:16 thumbnail; and `SOCIAL.md`.
-- **rev2, after David watched it.** He heard two out-points landing inside a
-  word, at 0:43 ("REAPER") and 1:00 ("chords"). An assertion over every piece
-  found 27 of the 74 doing it by 0.05 to 0.35s, and the same defect on the
-  IN-points once that was fixed. `cut._pull_in()` and `cut._extend()` now hold
-  every edit point clear of the word it lands in; zero pieces on either side.
-  A fifth transcription pass also settled the reaction beat, which every wider
-  window had misread ("I don't know about all that", not "how about all that").
-  Both files rebuilt, re-measured, re-captioned and re-swept.
-- **Social package also in the vault**, `C:/Users/wretc/second-brain` (the
-  checkout Obsidian has open, on main), as
-  `content/claude-band-reaper-daemon-video-social.md` (YouTube, Facebook, X)
-  and `content/claude-band-reaper-daemon-short-social.md` (YouTube Short,
-  Instagram, TikTok), both `status: draft`, both pushed.
-- **Heads up: `workspace/second-brain/bonefish` is 28 commits behind main** and
-  still carries the Content Desk subsystem main removed in a93f887. The package
-  went there first, in the dead schema, before that was caught. It has been
-  removed from that clone. Nothing else was touched there.
-- **Read `projects/claude-band-reaper-daemon/RUN-REPORT.md`** for the full
-  account, and that project's `README.md` before revising the cut.
-- **The camera is LANDSCAPE this time**, so this is a real A/B roll talking
-  head, not the burned-in inset the last two cuts on this rig had to use.
-- **A defect that nearly shipped: `concat -c copy` produced the right frame
-  count and the wrong timestamps**, because `cards.mjs` conforms without
-  `-video_track_timescale`. The delivery encode reconciled it against the audio
-  by dropping 547 frames and nothing errored. Now checked three ways.
-- **The first 9:16 thumbnail had "WHAT THE FUCK" burned into it** because Codex
-  pulled its face frame from the delivered Short. Rebuilt off a picture-only
-  clip. Never point a thumbnail pass at a delivery that burns in captions.
-- **Beds: Fog Over Salt Flats, Cliffside Drift, Analog Rift**, all from
-  `approved-beds/personal`, none previously shipped. The whole 16-cue library
-  was measured before choosing (`projects/claude-band-reaper-daemon/bed-analysis/`).
-- **Safety swept in full**: 376 camera frames and 664 screen frames at 2 fps,
-  every kept piece, all sheets looked at. No vape, no taskbar, no title bar, no
-  paths, no credentials.
-- **Left for David:** watch both, with ears. Also his call on the Recents list.
+**Delivered, everything in one folder** at
+`C:/media/video/claude-band-reaper-daemon/final/`:
 
+- `2026-08-27_claude-band-reaper-daemon_master.mp4` - **385.90s (6:25.9)**,
+  11577 frames, 1920x1080, 30fps CFR, -14.7 LUFS, LRA 4.6, -1.9 dBTP, BT.709,
+  AAC 48 kHz stereo, 140 MB
+- `..._master.srt` - 115 cues
+- `..._short_master.mp4` - **53.00s**, 1590 frames, 1080x1920, 30fps CFR,
+  -14.6 LUFS, LRA 5.6, -2.0 dBTP, captions burned in, 39 MB
+- `..._short_master.srt` - 25 cues
+- `..._thumb-16x9.jpg` and `..._short_thumb-9x16.jpg`
+- `SOCIAL.md`
+
+Chapters, read off the delivered file: 0:00 / 0:22 / 1:11 / 3:16 / 4:52 / 5:47.
+
+**Social package in the vault**, `C:/Users/wretc/second-brain` (the checkout
+Obsidian has open, on `main`): `content/claude-band-reaper-daemon-video-social.md`
+(YouTube, Facebook, X) and `...-short-social.md` (YouTube Short, Instagram,
+TikTok), both `status: draft`, both pushed.
+
+**Build projects** are `projects/claude-band-reaper-daemon/` and
+`-short/`, both gitignored like every other project here.
+`projects/claude-band-reaper-daemon/RUN-REPORT.md` is the full account and each
+project's `README.md` is its paper trail. Read them before revising the cut.
+
+### Verified, and how
+
+- Frame counts on both delivered files match their own `picture.mp4` exactly,
+  and both are 30fps CFR / 48 kHz AAC / BT.709. Probed on the delivered files.
+- Per-beat loudness measured on the DELIVERED long cut: 7 bed-alone beats at
+  -18.0 to -19.8 (1.8 LU spread, 3.3 to 5.1 LU under program).
+- Captions matched against a transcription of each delivered file's OWN audio:
+  96/115 and 23/25. **The remaining flags are the verifier's own transcription
+  drifting a word across a cue boundary, not dropped clips** - three of them,
+  including the worst-looking one, were checked directly against the delivered
+  audio and are correct.
+- Black-run scan: 7 on the long cut (the six cards plus the ident's own black
+  head), 1 on the Short (the end card).
+- **Safety swept three times**: 376 camera + 664 screen frames at 2 fps on rev1,
+  then only the newly added material on rev2 (70 frames) and rev3 (87 frames).
+  Every sheet was looked at. No vape, no taskbar, no title bar, no paths, no
+  credentials.
+- **Assertion over every piece**: none ends inside its own last word, none
+  begins inside a word (except a beat's own hand-pinned opening, which is an
+  editorial choice), and none gained a word the edit excluded.
+
+### Assumed, not verified
+
+Nothing about the files. **Nobody has watched either cut end to end** except
+David's two partial passes, which is how both revisions happened.
+
+### Traps
+
+- **`concat -c copy` does not conform timebases.** `cards.mjs` writes its own,
+  so the concatenated picture read 11331 frames at an average 30.27 fps and the
+  delivery encode reconciled it against the audio by silently dropping 547
+  frames. Nothing errored and the frame-count assertion passed, because the
+  count was right. `build.py` now re-encodes cards through the project encoder,
+  checks container DURATION against frames/fps, and forces `-fps_mode cfr`.
+  **Do not remove any of the three.**
+- **An out-point snapped off the burst map ends INSIDE the last word.** At
+  `burst_db` -48 a word's final consonant has already decayed below threshold.
+  27 of 74 pieces did it; David heard two. `cut._extend()` and `cut._pull_in()`
+  fix both edges. **`_pull_in` must stay restricted to parts after the first** -
+  applied to a beat's opening it drags in words the cut deliberately starts
+  after (a stray "Claude?", "so", "better", "sometimes").
+- **Whisper stretches the last word of a segment to the segment end**, so a
+  word can come back 2.3 seconds long. `tighten()` measures pauses as
+  `next.start - this.end`, and an inflated end makes a real pause vanish: it
+  collapsed a three-part beat into one and left five seconds of dead air.
+  `cut.GAP_WORDS` clamps ends to the burst they start in for gap detection, and
+  `cut.EDIT_WORDS` caps them at 600 ms for the edit repairs. **The two clamps
+  are different on purpose and neither can be used for the other's job.**
+- **Window size is itself a transcription variable.** The reaction beat took
+  five passes. At 110s it read "Yeah, how about all that"; at 40s "about all
+  that"; at 28s "How about all that". Cut into 2-to-11-second windows it reads
+  what he says: "Hmm. I don't know about all that. I don't know about all that."
+  Every wider pass lost the same three words. When passes disagree, narrow the
+  window before believing any of them.
+- **Never point a thumbnail pass at a delivery that burns in captions.** Codex's
+  first 9:16 used a screengrab of the delivered Short and put "WHAT THE FUCK" in
+  the thumbnail.
+- **`workspace/second-brain/bonefish` is a stale clone**, 28 commits behind main
+  and still carrying the Content Desk subsystem main removed in a93f887. The
+  package went there first by mistake and was removed. The live vault is
+  `C:/Users/wretc/second-brain`.
+- **The camera's audio reads as unusable at 1s RMS and is not.** A raw waveform
+  correlation on the clap slate locks the offset at +28.548s.
+
+### Left for David
+
+1. **Watch both, with ears.** The only open item.
+2. His call on the agent's Recents list, legible on screen and naming a client
+   by shorthand ("wygc"). That client's work is already public on this channel.
+3. Two PNGs appeared in `final/` at 23:55-23:56 on 08-27,
+   `...-thumbnail-horizontal-generated.png` and `...-vertical-generated.png`.
+   Not from this run and not touched.
 
 ## 2026-08-24 - codex-reaper-daemon: the 49.7s vertical Short is delivered
 
