@@ -1,8 +1,45 @@
-> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage | next: codex-reaper-daemon is DELIVERED (4m24.1s master plus a 49.7s vertical SHORT delivered 2026-08-24, both in C:/media/video/codex-reaper-daemon/final/) and BOTH need David's watch before upload; the master's .srt has one wrong word at cue 56 - it says "See, Codex officially sucks at this shit" and the source says "Yeah," - not fixed yet; the delivered ox-alpha Short is 96 kHz AAC from a loudnorm/aac interaction, harmless in playback but wrong in a master, rebuild fixes it; Ox Alpha SHORT is built and delivered (47.2s vertical, needs David's watch); the Ox Alpha LONG-FORM cut is still parked on its 11-box human safety sweep and nothing long-form is delivered; WGYC sailboat is DONE - rev2 and the Short are both audited by David, public on YouTube, and rev2 is with Camilla; the beds shipped as-is; reaper-daemon-drums is BROKEN - source has 35s of digital silence over the cold open and the payoff, needs the REAPER groove bounced or a re-record before anything else
+> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage | next: claude-band-reaper-daemon is DELIVERED 2026-08-27 - a 6:17.7 long-form master, a 50.97s vertical Short, both thumbnails and the social package, all in C:/media/video/claude-band-reaper-daemon/final/ - and NOBODY HAS WATCHED EITHER CUT, which is the only thing left; two open calls for David, the agent's Recents list is legible on screen and names a client by shorthand, and the Content Desk renderer is broken on a missing workspace/dpd-design-system/styles/tokens.css so the two vault posts could not be previewed; codex-reaper-daemon is DELIVERED (4m24.1s master plus a 49.7s vertical SHORT delivered 2026-08-24, both in C:/media/video/codex-reaper-daemon/final/) and BOTH need David's watch before upload; the master's .srt has one wrong word at cue 56 - it says "See, Codex officially sucks at this shit" and the source says "Yeah," - not fixed yet; the delivered ox-alpha Short is 96 kHz AAC from a loudnorm/aac interaction, harmless in playback but wrong in a master, rebuild fixes it; Ox Alpha SHORT is built and delivered (47.2s vertical, needs David's watch); the Ox Alpha LONG-FORM cut is still parked on its 11-box human safety sweep and nothing long-form is delivered; WGYC sailboat is DONE - rev2 and the Short are both audited by David, public on YouTube, and rev2 is with Camilla; the beds shipped as-is; reaper-daemon-drums is BROKEN - source has 35s of digital silence over the cold open and the payoff, needs the REAPER groove bounced or a re-record before anything else
 # HANDOFF - OpenMontage
 
 Upstream clone plus local work. Contribute changes upstream rather than
 diverging.
+
+## 2026-08-27 - claude-band-reaper-daemon: long form, Short, thumbnails, package
+
+**Done end to end in one run.** David asks Claude Code, through his own REAPER
+Daemon, to write a metal song in REAPER section by section, and reacts live.
+One riff comes back usable, the chorus comes back comically bad, the breakdown
+comes back closest to right. His verdict: "the potential's there, but I don't
+think AI is replacing musicians anytime soon."
+
+- **Delivered, all in one folder** at `C:/media/video/claude-band-reaper-daemon/final/`:
+  the 6:17.7 master (11331 frames, 1920x1080, 30fps CFR, -14.7 LUFS, -2.0 dBTP,
+  BT.709, AAC 48 kHz) plus its 112-cue `.srt`; the 50.97s Short (1529 frames,
+  1080x1920, -14.6 LUFS, -2.1 dBTP, captions burned in) plus its `.srt`; a
+  16:9 and a 9:16 thumbnail; and `SOCIAL.md`.
+- **Social package also in the vault** as two Content Desk posts,
+  `second-brain/content/claude-band-reaper-daemon-video-social.md` (YouTube,
+  Facebook, X) and `...-short-social.md` (YouTube Short, Instagram, TikTok),
+  both `status: draft`.
+- **Read `projects/claude-band-reaper-daemon/RUN-REPORT.md`** for the full
+  account, and that project's `README.md` before revising the cut.
+- **The camera is LANDSCAPE this time**, so this is a real A/B roll talking
+  head, not the burned-in inset the last two cuts on this rig had to use.
+- **A defect that nearly shipped: `concat -c copy` produced the right frame
+  count and the wrong timestamps**, because `cards.mjs` conforms without
+  `-video_track_timescale`. The delivery encode reconciled it against the audio
+  by dropping 547 frames and nothing errored. Now checked three ways.
+- **The first 9:16 thumbnail had "WHAT THE FUCK" burned into it** because Codex
+  pulled its face frame from the delivered Short. Rebuilt off a picture-only
+  clip. Never point a thumbnail pass at a delivery that burns in captions.
+- **Beds: Fog Over Salt Flats, Cliffside Drift, Analog Rift**, all from
+  `approved-beds/personal`, none previously shipped. The whole 16-cue library
+  was measured before choosing (`projects/claude-band-reaper-daemon/bed-analysis/`).
+- **Safety swept in full**: 376 camera frames and 664 screen frames at 2 fps,
+  every kept piece, all sheets looked at. No vape, no taskbar, no title bar, no
+  paths, no credentials.
+- **Left for David:** watch both, with ears. Also his call on the Recents list.
+
 
 ## 2026-08-24 - codex-reaper-daemon: the 49.7s vertical Short is delivered
 
