@@ -32,11 +32,11 @@ which carries its own fade to black). Transitions are 0.3s dissolves with 0.1s
 near-cuts for punch and 0.4-0.5s fade-to-black around the title cards. One
 unified grade and grain pass over the whole timeline.
 
-**The Dead Pixel end card was deliberately NOT used.** `assets/dpd-Title
-Sequence.mp4` reads "DEAD PIXEL DESIGN", and the channel note says no Dead Pixel
-or Wretcher anywhere on this account. Both ends use the Signals & Static card
-instead. If David actually wanted the dpd card, that is a one-line EDL change
-and a rebuild.
+**Both ends use the Signals & Static card, confirmed by David 2026-09-05 as what
+he wanted.** The assets folder also holds `dpd-Title Sequence.mp4`, which reads
+"DEAD PIXEL DESIGN" on screen and would breach the channel note's ban on Dead
+Pixel and Wretcher branding on this account. It is not used anywhere in these
+five and should not be.
 
 **Screening:** all 133 sources were contact-sheeted (24 frames each) and read by
 six parallel subagents. 14 files are audio recordings with a frozen NASA logo
