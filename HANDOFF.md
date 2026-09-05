@@ -54,9 +54,23 @@ is only legible from about 20.7s to 21.2s, so it runs at 35% to open the cut and
 
 **Build:** `projects/signals-static-uap/work/build.py` takes an EDL json
 (`v1.json` .. `v5.json` in the same folder) and does normalize-then-xfade-chain.
-Two traps found the hard way: an xfade `duration` below about 0.05s silently
-truncates the whole chain rather than erroring, and `-t` must come before `-i`
-or the output is clipped before a `setpts` slowdown can stretch it.
+Because `projects/` is gitignored here, `build.py` and the five EDLs are also
+copied to `C:/media/video/signals-and-static/working/` so the recipe survives.
+
+**Traps are in `LEARNINGS.md`** (fork-local, excluded like `WORKFLOW.md`). Read it
+before touching this or any other ffmpeg cut. The two that cost the most: an xfade
+`duration` below about 0.05s silently truncates the entire chain with exit code 0,
+and `-t` must come before `-i` or the output is clipped before a `setpts` slowdown
+can stretch it. Also in there: `-pattern_type glob` is unsupported in this ffmpeg
+build, `drawtext` cannot take a Windows drive-letter font path, and more than about
+4 parallel ffmpeg jobs against `assets/ufo-videos-raw/` saturates the disk badly
+enough to hang unrelated shell commands.
+
+**Verified how:** ffprobe for container, resolution, frame rate and the absence of
+an audio stream on all five; sampled-frame contact sheets of each rendered file for
+structure, subject visibility and transitions; a dense 6 fps sample across the
+video 5 opening to confirm the disc beat and the fade to black; and a programmatic
+check that no source file appears in more than one video.
 
 **Not verified:** nobody has watched any of the five end to end. Everything above
 was confirmed from contact sheets of the rendered files plus ffprobe, not from
