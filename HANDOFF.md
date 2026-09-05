@@ -1,8 +1,157 @@
-> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage | next: claude-band-reaper-daemon is DELIVERED 2026-08-27 - 6:25.9 long-form master, 53.0s vertical Short, both thumbnails and the social package, all in C:/media/video/claude-band-reaper-daemon/final/, revised twice after David caught edit points landing inside words - and NOBODY HAS WATCHED EITHER CUT END TO END, which is the only open item; codex-reaper-daemon is DELIVERED (4m24.1s master plus a 49.7s vertical SHORT delivered 2026-08-24, both in C:/media/video/codex-reaper-daemon/final/) and BOTH need David's watch before upload; the master's .srt has one wrong word at cue 56 - it says "See, Codex officially sucks at this shit" and the source says "Yeah," - not fixed yet; the delivered ox-alpha Short is 96 kHz AAC from a loudnorm/aac interaction, harmless in playback but wrong in a master, rebuild fixes it; Ox Alpha SHORT is built and delivered (47.2s vertical, needs David's watch); the Ox Alpha LONG-FORM cut is still parked on its 11-box human safety sweep and nothing long-form is delivered; WGYC sailboat is DONE - rev2 and the Short are both audited by David, public on YouTube, and rev2 is with Camilla; the beds shipped as-is; reaper-daemon-drums is BROKEN - source has 35s of digital silence over the cold open and the payoff, needs the REAPER groove bounced or a re-record before anything else
+> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage | next: signals-static-uap is DELIVERED 2026-09-05 - five 9:16 TikTok cuts (40.3s to 46.9s) in C:/media/video/signals-and-static/final/ plus projects/signals-static-uap/out/, POST-COPY.md carries captions and hashtags, CLIP-LEDGER.md proves no source file is reused across the five, and NOBODY HAS WATCHED ANY OF THE FIVE END TO END; claude-learn-by-example is BUILT 2026-08-28 - 2:49.9 long-form master plus a 54.8s vertical Short, both in C:/media/video/claude-learn-by-example/final/, VO-later (script is next to the master), NOBODY HAS WATCHED EITHER CUT; claude-band-reaper-daemon is DELIVERED 2026-08-27 - 6:25.9 long-form master, 53.0s vertical Short, both thumbnails and the social package, all in C:/media/video/claude-band-reaper-daemon/final/, revised twice after David caught edit points landing inside words - and NOBODY HAS WATCHED EITHER CUT END TO END, which is the only open item; codex-reaper-daemon is DELIVERED (4m24.1s master plus a 49.7s vertical SHORT delivered 2026-08-24, both in C:/media/video/codex-reaper-daemon/final/) and BOTH need David's watch before upload; the master's .srt has one wrong word at cue 56 - it says "See, Codex officially sucks at this shit" and the source says "Yeah," - not fixed yet; the delivered ox-alpha Short is 96 kHz AAC from a loudnorm/aac interaction, harmless in playback but wrong in a master, rebuild fixes it; Ox Alpha SHORT is built and delivered (47.2s vertical, needs David's watch); the Ox Alpha LONG-FORM cut is still parked on its 11-box human safety sweep and nothing long-form is delivered; WGYC sailboat is DONE - rev2 and the Short are both audited by David, public on YouTube, and rev2 is with Camilla; the beds shipped as-is; reaper-daemon-drums is BROKEN - source has 35s of digital silence over the cold open and the payoff, needs the REAPER groove bounced or a re-record before anything else
 # HANDOFF - OpenMontage
 
 Upstream clone plus local work. Contribute changes upstream rather than
 diverging.
+
+## 2026-09-05 - signals-static-uap: five 9:16 UAP cuts DELIVERED (silent, video only)
+
+First five cuts for the Signals & Static TikTok channel, built from the
+Department of War UAP releases in `assets/ufo-videos-raw/` (133 files).
+Channel rules came from `~/second-brain/projects/signals-and-static.md`.
+
+**Delivered** in `projects/signals-static-uap/out/` and mirrored to
+`C:/media/video/signals-and-static/final/`:
+
+| File | Length | Size |
+|---|---|---|
+| `01-dark-spheres.mp4` | 46.9s | 44 MB |
+| `02-locked-on.mp4` | 43.2s | 35 MB |
+| `03-lights-in-the-dark.mp4` | 43.5s | 34 MB |
+| `04-contact-over-water.mp4` | 40.3s | 30 MB |
+| `05-the-approach.mp4` | 43.0s | 28 MB |
+
+All five: 1080x1920, 30 fps CFR, h264 High, yuv420p, faststart, **no audio
+stream at all** (David is scoring these with TikTok sounds). CRF 21 capped at
+12 Mbit/s for upload; CRF 18 masters kept in `out/masters/`.
+
+**Structure of every cut:** cold open on the strongest shot, Signals & Static
+title card at ~3s (source 6.0-8.0s, where the mark is fully assembled), montage
+of 10 to 13 clips at 3.3-3.5s each, close on the title card again (5.0-8.4s,
+which carries its own fade to black). Transitions are 0.3s dissolves with 0.1s
+near-cuts for punch and 0.4-0.5s fade-to-black around the title cards. One
+unified grade and grain pass over the whole timeline.
+
+**The Dead Pixel end card was deliberately NOT used.** `assets/dpd-Title
+Sequence.mp4` reads "DEAD PIXEL DESIGN", and the channel note says no Dead Pixel
+or Wretcher anywhere on this account. Both ends use the Signals & Static card
+instead. If David actually wanted the dpd card, that is a one-line EDL change
+and a rebuild.
+
+**Screening:** all 133 sources were contact-sheeted (24 frames each) and read by
+six parallel subagents. 14 files are audio recordings with a frozen NASA logo
+and a scrolling waveform, no imagery at any point - listed in `CLIP-LEDGER.md`
+so nobody screens them again. ~45 more were rejected as empty grey infrared,
+mostly-redacted, out of focus, or ordinary surveillance with no anomaly.
+
+**35 source files used across 60 clips, and no source file appears in more than
+one video.** That is checked programmatically by the ledger generator, not by
+hand.
+
+**One speed change, disclosed:** in `05-the-approach` the disc in DOD_111830075
+is only legible from about 20.7s to 21.2s, so it runs at 35% to open the cut and
+50% later. Both are called out in the caption in `POST-COPY.md`.
+
+**Build:** `projects/signals-static-uap/work/build.py` takes an EDL json
+(`v1.json` .. `v5.json` in the same folder) and does normalize-then-xfade-chain.
+Two traps found the hard way: an xfade `duration` below about 0.05s silently
+truncates the whole chain rather than erroring, and `-t` must come before `-i`
+or the output is clipped before a `setpts` slowdown can stretch it.
+
+**Not verified:** nobody has watched any of the five end to end. Everything above
+was confirmed from contact sheets of the rendered files plus ffprobe, not from
+playback.
+
+## 2026-08-29 - stigmergy-visualizer: 88.000s master ASSEMBLED (silent, pre-song)
+
+Music visualizer for David's retro original "Stigmergy" (HF/OpenAI-incident
+mood). Concept doc: `C:/media/photo/personal/the-cathedral/stigmergy-video-concept.md`.
+13 etched plates animated (lamp sway, paper-to-face, writhing hands, cathedral
+self-build, hooded approach, pixelate dissolve, wax-seal press, agent refuses,
+agent startled by watch, notes-stuffing, vast pullback, rotunda chair, the last
+note in wind). Picked up after the Fable-5 (claude-fable-5) Claude Code
+subagent fanout hit the session limit at ~08:13 with shot_13 unrendered and no
+assembly.
+
+**Delivered** at
+`C:/Users/wretc/workspace/OpenMontage/projects/stigmergy-visualizer/renders/stigmergy_master.mp4`:
+- **88.000 s, 2640 frames decoded, 1920x1080, 30 fps CFR, h264 yuv420p,
+  BT.709 tagged, tv range, crf 16, 754 MB** (large because per-frame grade
+  grain is incompressible by design - bible section 7 mandates it).
+- All 13 hard cuts land on timeline frames (110/197/332/482/612/762/872/982/
+  1112/1292/1652/2112 - shot 3 hits frame 197 = 6.575s as the concept demands).
+- 12-frame cold fade-in from black; 30-frame fade-out ending at luma ~0.004
+  on frame 2640.
+- Unified grade applied once over all frames in-float before encode (filmic
+  S-curve, x0.88 desat, static vignette, per-frame sigma-5 grain, one shared
+  0.5-2 Hz flicker track), per MOTION-BIBLE section 7.
+
+**Built by**: prepped assets + MOTION-BIBLE + timeline.json + 13 specs +
+engine/anim.py + 13 shot builders were Fable 5's work (verified, not redone);
+Hermes rendered `shot_13.mp4` (528f) and wrote `engine/assemble.py`
+(the section-7 grade + concat), then encoded the master. Old `renders/smoke.mp4` and a
+48-byte `shot_13.mp4` stub from the killed re-attempt were superseded.
+
+**Not verified:** nobody has watched the master end to end. Video is SILENT by
+design - the song is written but unmixed; mux it on later. Grade white-point
+clips at 0.97 per bible "never full white" (shot 12's neon-cyan oculus is the
+source plate's own style, not a grade defect).
+
+**Left for David:** watch the master; mix "Stigmergy" and mux the bed in. The
+OpenMontage venv still lacks scipy (shot code avoids it - fine as-is).
+
+## 2026-08-28 - claude-learn-by-example: long form, Short, VO script
+
+VO-later process film. He humanizes seven bars of drums by hand, Claude
+learns the rest, he corrects the golden rule, they make it a skill.
+
+**On disk, probed 2026-08-28 wrap** at
+`C:/media/video/claude-learn-by-example/final/`:
+
+- `2026-08-28_claude-learn-by-example_master.mp4` — **169.90s (2:49.9)**,
+  5097 frames, 1920x1080, 30fps CFR, yuv420p tv BT.709, AAC 48 kHz,
+  43,804,158 bytes
+- `2026-08-28_claude-learn-by-example-short_master.mp4` — **54.80s**,
+  1644 frames, 1080x1920, 30fps CFR, yuv420p tv BT.709, AAC 48 kHz,
+  5,333,891 bytes
+- `VO-SCRIPT.md` — timed to the long cut after the Magpie recut. Record
+  to picture. Do not talk over listen / thall.
+
+Inbox is empty. Raws in `.../raw/`. Build in gitignored
+`projects/claude-learn-by-example/` and `-short/`. Read `RUN-REPORT.md`
+before revising.
+
+**Verified, and how**
+
+- ffprobe on both files in `final/` (wrap): duration, frame count, 30fps,
+  BT.709 limited, AAC 48 kHz match the numbers above.
+- Magpie recut: prompt out at source 19.00, lapse_a in at 28.00. 1fps
+  safety sheet of current `rough_v.mp4` is 170 frames. Program stills
+  18–25s have no Magpie popup.
+- EVALUATION LICENSE cropped off the long cut (y=24). Short MIDI crop was
+  rebuilt from y=24 after the first Short showed the license bar.
+- No Orca window on this tape (full 17:44 scan). No drawn circles.
+
+**Not verified:** nobody has watched either cut with eyes or ears.
+
+**Left for David:** watch both; record the VO from `VO-SCRIPT.md`; talking
+head if he still wants it. Thumbnails are a paid Codex call, not made.
+
+**Traps**
+
+- Magpie opens at source 19.5s with unrelated clipboard text and a
+  metr.org URL. Do not widen the prompt clip past 19.00. Second hit ~60s.
+- `montage.py audio` on a mute-program mix program-trims the bed and
+  boosts the drums. Mix bed at mus_alone, leave B-roll at recorded level,
+  limiter only.
+- Short MIDI crop at y=0 puts `EVALUATION LICENSE` back on screen. y=24.
+- Bars 8+ leave flat 127 at **197.5s**, which is inside the wait lapse.
+  The held after-shot is overlay-off at 348s. A recut that wants the
+  write at full speed starts there.
+- This HANDOFF edit is **uncommitted**. The repo is on
+  `fix/music-capability-discovery` with hundreds of unrelated skill
+  deletions. Do not commit video status onto that PR. Copied paper trail
+  also lives next to the masters in `final/`.
 
 ## 2026-08-27 - claude-band-reaper-daemon: long form, Short, thumbnails, package
 
