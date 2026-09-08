@@ -82,6 +82,20 @@ title-card mp4s are now in `.git/info/exclude`, fork-locally, same as `wgyc-asse
 had been showing as untracked on every `git status` and were a real `git add -A` hazard on
 a repo that contributes upstream. The files are untouched on disk.
 
+**Thumbnails exist but were not made by this session.** TikTok covers for 06 and 07
+landed in `C:/media/video/signals-and-static/final/thumbnails/` at 21:53 on 2026-09-07,
+written by a different Claude session ("Two new TikTok videos from fresh UAP footage",
+offline by the time this was noticed). They are 1080x1920, match the house style of the
+01-05 covers, and use the two hero frames: the underwater blue for 06 and the white object
+in the track box for 07. Source frames are in `working/thumbnail-06-07/`. **I did not
+create them and did not verify how they were produced.** Look at them before posting. The
+cuts, the ledger and the post copy were confirmed byte-identical to what this session
+mirrored, so that session touched nothing but thumbnails.
+
+Unrelated, pre-existing: the cut 05 cover is named
+`signals-static-05-out-of-the-box-tiktok-cover.png` while cut 05 is "the-approach" and cut
+07 is "held-in-the-box". Worth a rename before anyone confuses the two.
+
 **Next action:** watch all seven cuts end to end, then post. Order in `POST-COPY.md` is
 1, 3, 5, 2, 4, then 7, then 6.
 
