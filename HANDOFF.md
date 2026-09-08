@@ -1,8 +1,70 @@
-> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage | next: signals-static-uap is DELIVERED 2026-09-05 - five 9:16 TikTok cuts (40.3s to 46.9s) in C:/media/video/signals-and-static/final/ plus projects/signals-static-uap/out/, POST-COPY.md carries captions and hashtags, CLIP-LEDGER.md proves no source file is reused across the five, and NOBODY HAS WATCHED ANY OF THE FIVE END TO END; claude-learn-by-example is BUILT 2026-08-28 - 2:49.9 long-form master plus a 54.8s vertical Short, both in C:/media/video/claude-learn-by-example/final/, VO-later (script is next to the master), NOBODY HAS WATCHED EITHER CUT; claude-band-reaper-daemon is DELIVERED 2026-08-27 - 6:25.9 long-form master, 53.0s vertical Short, both thumbnails and the social package, all in C:/media/video/claude-band-reaper-daemon/final/, revised twice after David caught edit points landing inside words - and NOBODY HAS WATCHED EITHER CUT END TO END, which is the only open item; codex-reaper-daemon is DELIVERED (4m24.1s master plus a 49.7s vertical SHORT delivered 2026-08-24, both in C:/media/video/codex-reaper-daemon/final/) and BOTH need David's watch before upload; the master's .srt has one wrong word at cue 56 - it says "See, Codex officially sucks at this shit" and the source says "Yeah," - not fixed yet; the delivered ox-alpha Short is 96 kHz AAC from a loudnorm/aac interaction, harmless in playback but wrong in a master, rebuild fixes it; Ox Alpha SHORT is built and delivered (47.2s vertical, needs David's watch); the Ox Alpha LONG-FORM cut is still parked on its 11-box human safety sweep and nothing long-form is delivered; WGYC sailboat is DONE - rev2 and the Short are both audited by David, public on YouTube, and rev2 is with Camilla; the beds shipped as-is; reaper-daemon-drums is BROKEN - source has 35s of digital silence over the cold open and the payoff, needs the REAPER groove bounced or a re-record before anything else
+> status: active | one-liner: OSS agentic video platform, fork of calesthio/OpenMontage | next: signals-static-uap is DELIVERED through cut 07 - 2026-09-07 added 06-under-the-surface (43.2s) and 07-held-in-the-box (43.5s), both silent 9:16, in C:/media/video/signals-and-static/final/ plus projects/signals-static-uap/out/; the whole 133-file archive is now screened so there is no unscreened pool left; POST-COPY.md carries captions and hashtags for all seven, work/ledger.py regenerates CLIP-LEDGER.md and FAILS if a source file appears in two cuts, and NOBODY HAS WATCHED ANY OF THE SEVEN END TO END; claude-learn-by-example is BUILT 2026-08-28 - 2:49.9 long-form master plus a 54.8s vertical Short, both in C:/media/video/claude-learn-by-example/final/, VO-later (script is next to the master), NOBODY HAS WATCHED EITHER CUT; claude-band-reaper-daemon is DELIVERED 2026-08-27 - 6:25.9 long-form master, 53.0s vertical Short, both thumbnails and the social package, all in C:/media/video/claude-band-reaper-daemon/final/, revised twice after David caught edit points landing inside words - and NOBODY HAS WATCHED EITHER CUT END TO END, which is the only open item; codex-reaper-daemon is DELIVERED (4m24.1s master plus a 49.7s vertical SHORT delivered 2026-08-24, both in C:/media/video/codex-reaper-daemon/final/) and BOTH need David's watch before upload; the master's .srt has one wrong word at cue 56 - it says "See, Codex officially sucks at this shit" and the source says "Yeah," - not fixed yet; the delivered ox-alpha Short is 96 kHz AAC from a loudnorm/aac interaction, harmless in playback but wrong in a master, rebuild fixes it; Ox Alpha SHORT is built and delivered (47.2s vertical, needs David's watch); the Ox Alpha LONG-FORM cut is still parked on its 11-box human safety sweep and nothing long-form is delivered; WGYC sailboat is DONE - rev2 and the Short are both audited by David, public on YouTube, and rev2 is with Camilla; the beds shipped as-is; reaper-daemon-drums is BROKEN - source has 35s of digital silence over the cold open and the payoff, needs the REAPER groove bounced or a re-record before anything else
 # HANDOFF - OpenMontage
 
 Upstream clone plus local work. Contribute changes upstream rather than
 diverging.
+
+## 2026-09-07 - signals-static-uap: cuts 06 and 07 DELIVERED, archive fully screened
+
+Two more 9:16 silent cuts for the Signals & Static TikTok channel, and the end of the
+screening backlog.
+
+**Delivered** in `projects/signals-static-uap/out/` and mirrored to
+`C:/media/video/signals-and-static/final/`:
+
+| File | Length | Upload | Master |
+|---|---|---|---|
+| `06-under-the-surface.mp4` | 43.2s | 36 MB | 104 MB |
+| `07-held-in-the-box.mp4` | 43.5s | 34 MB | 118 MB |
+
+Both 1080x1920, 30 fps CFR, h264 High, yuv420p, faststart, **no audio stream at all**.
+Same shape as 01-05: CRF 21 capped at 12 Mbit/s for upload, CRF 18 master in
+`out/masters/`. Same structure too: cold open on the strongest shot, Signals & Static
+card at ~3s, twelve clips at 3.2-3.5s, card again at the end.
+
+**06 Under the Surface** is the sea and night cut. Its two real shots are DOD_111719799,
+an underwater camera descending through deep blue water with a lit point in it, and
+DOD_111689115, a large dark circle sitting on the sea surface with a tracking box on it.
+It opens and closes underwater so it loops. It is the darkest of the seven by some way.
+
+**07 Held in the Box** is the sensor cut: every clip is something being held in a reticle
+or a track box. It carries the only two colour shots left in the archive, a blue-hour
+mountain silhouette (DOD_111764213) and a vertical phone video of orange lights over trees
+(DOD_111764177, the only natively 9:16 file in the folder).
+
+**Each cut uses 10 source files across 12 clips, and no source file appears in more than
+one of the seven cuts.** That is now enforced by `work/ledger.py`, which regenerates
+`out/CLIP-LEDGER.md` from `v1.json` .. `v7.json` and exits non-zero on any reuse. Current
+state: 84 clips, 55 source files, 7 cuts, passing.
+
+**The archive is fully screened.** The remaining 84 unscreened files all have a verdict
+now, in `work/screen2.tsv`: 10 strong, 12 usable, 56 rejected, and one more audio-only
+file. The old ledger said fourteen audio-only NASA-logo files; it is **fifteen**, it
+missed `DOD_111689232`. An eighth cut is possible but would be scraping.
+
+**Two new scripts next to `build.py`**, all three mirrored to
+`C:/media/video/signals-and-static/working/` because `projects/` is gitignored:
+`ledger.py` (regenerate the ledger, enforce the no-reuse rule) and `deliver.py` (move the
+CRF 18 master to `out/masters/` and write the capped upload file). That second step
+existed for 01-05 but had never been written down, so it had to be reconstructed.
+`build.py` gained one optional per-clip field, `eq`, for lifting exposure on a dark source
+before the shared grade runs.
+
+**Naming inconsistency in the 2026-09-05 mirror, not fixed:** the five files in
+`C:/media/.../final/` named `..._master.mp4` are actually the capped upload copies, and
+the real CRF 18 masters were never mirrored. The two new cuts are mirrored as both
+`_upload` and `_master` and those labels are accurate. Do not assume the 09-05 `_master`
+files are masters.
+
+**Verified how:** ffprobe on both delivered files for container, resolution, frame rate,
+profile and the absence of an audio stream; 24-frame contact sheets of each rendered file
+read for structure, subject visibility and transitions, twice, with three clips re-cut
+after the first pass because they read as dead black or the subject was too small;
+full-resolution frame pulls on the specific clips that were in doubt; and `ledger.py`
+proving programmatically that no source file is shared across the seven cuts.
+
+**Not verified:** nobody has watched cut 06 or cut 07 end to end in real time. That is
+still true of the first five as well.
 
 ## 2026-09-05 - signals-static-uap: five 9:16 UAP cuts DELIVERED (silent, video only)
 
