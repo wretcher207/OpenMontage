@@ -66,6 +66,25 @@ proving programmatically that no source file is shared across the seven cuts.
 **Not verified:** nobody has watched cut 06 or cut 07 end to end in real time. That is
 still true of the first five as well.
 
+**Traps, all written up in `LEARNINGS.md` (fork-local, mirrored to
+`C:/media/video/signals-and-static/working/`):** reading contact sheets through parallel
+subagents is what killed the two previous sessions, so screen in the main session in
+batches and append verdicts to a TSV after each; `mode:"wide"` always renders the picture
+at 1080x810 no matter what you crop, so use `mode:"letterbox"` with a measured crop when a
+source is square or natively vertical; `cropdetect` lies on the files with white borders
+and on dark night footage, so measure the picture area from a thresholded frame instead;
+and a `crop` band written `2*floor(ih*K)` needs K to be half the band you want, not the
+band. Also: `build.py` writes the master only, `deliver.py` writes the upload copy, and
+running the second on a stale master is easy to do while a rebuild is still going.
+
+**Repo hygiene, done this session:** the 14GB of source media under `assets/` and the two
+title-card mp4s are now in `.git/info/exclude`, fork-locally, same as `wgyc-assets/`. They
+had been showing as untracked on every `git status` and were a real `git add -A` hazard on
+a repo that contributes upstream. The files are untouched on disk.
+
+**Next action:** watch all seven cuts end to end, then post. Order in `POST-COPY.md` is
+1, 3, 5, 2, 4, then 7, then 6.
+
 ## 2026-09-05 - signals-static-uap: five 9:16 UAP cuts DELIVERED (silent, video only)
 
 First five cuts for the Signals & Static TikTok channel, built from the
