@@ -973,3 +973,7 @@ Evaluated and dropped.
 - WGYC camper-top build is in progress and blocked on the client sending usable
   finished-top media. Plan is `WGYC-BUILD-HANDOFF.md`; facts are in
   `PROJECTS-LOCAL.md`.
+
+## 2026-09-10: agent instruction audit
+
+Updated the local agent guidance to use task-relevant references and the shared autonomy/voice-profile agreement. Product and taste requirements remain in the instructions. Verified the instruction diff and reference paths; application behavior was not part of this documentation audit. Full file-by-file record: `C:/Users/wretc/workspace/AGENTS-AUDIT-2026-09-10.md`.
