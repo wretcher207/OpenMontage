@@ -4,4 +4,4 @@ For production work, read the relevant routing and pipeline sections of `AGENT_G
 
 Choose the workflow that fits the supplied footage and intended result. Treat workflow sequences as defaults; adapt routine implementation steps while retaining source provenance, audio/sync contracts, delivery requirements, cost authorization, and actual rendered-output verification. Preserve editorial autonomy within the brief.
 
-Public/client text, including on-screen copy and posting packages, requires the appropriate voice profile before drafting and a final profile review. Shared agreement: `C:/Users/wretc/.codex/AGENTS.md`.
+Public/client text, including on-screen copy and posting packages, requires the appropriate voice profile before drafting and a final profile review.
